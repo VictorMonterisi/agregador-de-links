@@ -1,0 +1,199 @@
+/* Padronização das cores e imagens */
+:root {
+  --text-color-geral: #fff;
+  --text-color-hover: #9448a8;
+  --bg-url-img: url(./assets/bg-mobile-dark.jpg);
+  --bg-color: #36013f;
+  --bg-switch: rgba(255, 255, 255, 0.8);
+  --bg-glass: rgba(255, 255, 255, 0.1);
+  --bg-glass-2: rgba(255, 255, 255, 0.2);
+  --bg-glass-deep: rgba(255, 255, 255, 0.05);
+  --border-glass: rgba(255, 255, 255, 0.5);
+  --icon-switch: url(./assets/moon.svg);
+}
+.light {
+  --text-color-geral: #111;
+  --text-color-hover: #36013f;
+  --bg-url-img: url(./assets/bg-mobile-light.jpg);
+  --bg-color: #fff;
+  --bg-switch: rgba(0, 0, 0, 0.8);
+  --bg-glass: rgba(0, 0, 0, 0.1);
+  --bg-glass-2: rgba(0, 0, 0, 0.2);
+  --bg-glass-deep: rgba(0, 0, 0, 0.05);
+  --border-glass: rgba(0, 0, 0, 0.5);
+  --icon-switch: url(./assets/sunny.svg);
+}
+
+/* Reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Fundo da página e estilo do texto */
+body {
+  background: var(--bg-color) var(--bg-url-img) no-repeat top center/cover;
+}
+body * {
+  font-family: "Inter", sans-serif;
+  color: var(--text-color-geral);
+}
+
+/* Container da página */
+.container {
+  width: 100%;
+  max-width: 588px;
+  padding: 0 24px;
+  margin: 0 auto;
+}
+
+/* Perfil => Foto + @ */
+.profile {
+  text-align: center;
+  margin: 18px auto;
+}
+.profile a img {
+  display: block;
+  width: 112px;
+  margin: 0 auto;
+}
+.profile a {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-decoration: none;
+  transition: 0.3s all ease;
+}
+.profile a:hover {
+  color: var(--text-color-hover);
+  transition: 0.3s all ease;
+}
+
+/* Switch */
+.switch {
+  position: relative;
+  width: 64px;
+  margin: 4px auto;
+}
+.switch button {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  background: var(--bg-switch) var(--icon-switch) no-repeat center/64%;
+  border: 0;
+  border-radius: 50%;
+  padding: 10px;
+  z-index: 2;
+  animation: slide-to-left 0.4s;
+}
+.switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: var(--bg-glass);
+  border: 1px solid var(--border-glass);
+  border-radius: 99px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 1;
+}
+.switch button:hover {
+  outline: 8px solid var(--bg-glass);
+  transition: 0.3s all ease;
+}
+.light .switch button {
+  animation: slide-to-right 0.4s forwards;
+}
+
+/* Botões com as opções */
+main ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  list-style: none;
+  padding: 24px 0;
+}
+main ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-glass);
+  border: 1px solid var(--border-glass);
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 16px 0;
+  transition: 0.3s all ease;
+}
+main ul li a:hover {
+  background: var(--bg-glass-deep);
+  border: 1px solid var(--text-color-geral);
+}
+
+/* Links das redes sociais */
+.social-links {
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+  padding: 24px 0;
+}
+.social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  border-radius: 50%;
+  transition: 0.3s all ease;
+}
+.social-links a:hover {
+  background: var(--bg-glass-2);
+  
+}
+
+/* Direitos autorais */
+.copyright {
+  text-align: center;
+}
+.copyright p {
+  font-size: 13px;
+  margin: 0;
+}
+
+/* Animações do switch light/dark mode */
+@keyframes slide-to-right {
+  from{
+    left: 0%
+  }
+  to {
+    left: 50%
+  }
+}
+@keyframes slide-to-left {
+  from{
+    left: 50%
+  }
+  to {
+    left: 0%
+  }
+}
+
+/* Ajustes de resolução */
+@media (min-width: 700px) {
+  :root {
+    --bg-url-img: url(./assets/bg-desktop-dark.jpg);
+  }
+  .light {
+    --bg-url-img: url(./assets/bg-desktop-light.jpg);
+  }
+}
+@media screen and (max-width: 400px) {
+  body {
+    height: 100vh;
+  }
+}
