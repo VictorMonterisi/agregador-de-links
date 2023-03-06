@@ -8,13 +8,11 @@
   <a href="#-layout">Sobre o Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 </p>
 
-<p align="center">
-  <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=49AA26&labelColor=000000">
-</p>
-
 <br>
 
-https://www.loom.com/embed/7ae4f598fcac49738435ee6012e938f2
+<p align="center">
+  <img alt="projeto Agregador de Links" src=".github/preview.gif" width="100%">
+</p>
 
 ## 🚀 Tecnologias
 
