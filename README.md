@@ -29,4 +29,4 @@ A webpage criada é, na verdade, um agregador de links para usarmos como cartão
 
 ## 🔖 Layout
 
-O layout do projeto baseado neste [DESSE LINK](https://www.figma.com/community/file/1187422022288947321). É necessário ter conta no [Figma](https://figma.com) para acessá-lo.
+O layout do projeto baseado [NESTE LINK](https://www.figma.com/community/file/1187422022288947321). É necessário ter conta no [Figma](https://figma.com) para acessá-lo.
